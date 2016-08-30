@@ -1,0 +1,48 @@
+<idea-plugin version="2">
+    <id>org.funivan.phpstorm.demo</id>
+    <name>Funivan Demo plugin</name>
+    <version>0.2</version>
+    <vendor email="dev@funivan.com" url="http://funivan.com">Funivan</vendor>
+
+    <description><![CDATA[
+      All knowledge about intellij ide platform.<br>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="131"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+    <depends>com.jetbrains.php</depends>
+    <depends>com.intellij.modules.platform</depends>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+
+
+        <!-- Section -->
+        <fileTypeFactory implementation="org.funivan.phpstorm.demo.FileType.TemplateFileTypeFactory"/>
+
+        <!-- Section -->
+        <intentionAction>
+            <className>org.funivan.phpstorm.demo.Intention.RemoveEmptyStringIntention</className>
+            <category>PHP</category>
+        </intentionAction>
+
+
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
