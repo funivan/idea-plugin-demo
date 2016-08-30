@@ -30,6 +30,10 @@
 
 
         <!-- Section -->
+        <completion.contributor implementationClass="org.funivan.phpstorm.demo.Completions.SimpleCompletionContributor"
+                                language="PHP"/>
+
+        <!-- Section -->
         <fileTypeFactory implementation="org.funivan.phpstorm.demo.FileType.TemplateFileTypeFactory"/>
 
         <!-- Section -->
